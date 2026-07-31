@@ -59,4 +59,30 @@ The transition to the Mini-Xception architecture combined with temporal smoothin
 
 * **Model Compression:** By replacing standard convolutions with Depthwise Separable Convolutions, the model size dropped below **1 MB**, making it lightweight enough to run effortlessly on edge devices or CPU-only web servers.
 * **Temporal Stability:** The FIFO queue and weighted voting mechanism successfully eliminated high-frequency label flickering, ensuring consistent emotion tracking across rapid facial transitions without adding perceptible lag.
+
+
+## 🛠️ Installation & Setup
+
+Follow these steps to clone the repository, set up your environment, and launch the application. Ensure you have Python (3.8+) and Git installed.
+
+* **Step 1: Clone the Repository & Navigate to Directory**
+  * `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git`
+  * `cd YOUR_REPOSITORY_NAME`
+
+* **Step 2: Create a Virtual Environment**
+  * **Windows:** `python -m venv venv`
+  * **macOS/Linux:** `python3 -m venv venv`
+
+* **Step 3: Activate the Environment**
+  * **Windows:** `venv\Scripts\activate`
+  * **macOS/Linux:** `source venv/bin/activate`
+
+* **Step 4: Install Dependencies**
+  * **All platforms:** `pip install -r requirements.txt` *(Or manually: `pip install opencv-python tensorflow flask numpy`)*
+
+* **Step 5: Run the Server**
+  * **All platforms:** `python app.py`
+
+* **Step 6: Open the Dashboard**
+  * Open your browser and navigate to `http://127.0.0.1:5000`
 * **Low Memory Footprint:** The combined pipeline maintains a negligible RAM footprint during continuous video streaming, ensuring zero performance decay during extended live sessions.
